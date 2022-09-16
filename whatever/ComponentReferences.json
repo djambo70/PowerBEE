@@ -1,0 +1,22 @@
+[
+  {
+    "HasLibraryLogicalName": true,
+    "InstanceCount": 2,
+    "LibraryId": "afd66c62-5e8e-4992-8987-a34dfb1c8498",
+    "LibraryLogicalName": "crcd4_powerbeecomponentlibrary_8ab98",
+    "LibraryVersion": "2022-09-13T10:44:53Z",
+    "OriginalComponentDefinitionTemplateId": "87860c4c5b1e4534bd45f8b9615384c0",
+    "RefusedSourceLastTimeSaved": "0001-01-01T00:00:00",
+    "SourceLastTimeSaved": "2022-09-13T10:44:58.681+00:00"
+  },
+  {
+    "HasLibraryLogicalName": true,
+    "InstanceCount": 2,
+    "LibraryId": "afd66c62-5e8e-4992-8987-a34dfb1c8498",
+    "LibraryLogicalName": "crcd4_powerbeecomponentlibrary_8ab98",
+    "LibraryVersion": "2022-09-13T10:44:53Z",
+    "OriginalComponentDefinitionTemplateId": "943453c5882c4cd4ba5d10769e99e9c8",
+    "RefusedSourceLastTimeSaved": "0001-01-01T00:00:00",
+    "SourceLastTimeSaved": "2022-09-13T10:44:58.681+00:00"
+  }
+]

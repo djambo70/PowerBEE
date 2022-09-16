@@ -1,0 +1,78 @@
+FooterComp As CanvasComponent:
+    Fill: =RGBA(0, 0, 0, 0)
+    FooterMainText: ="© 2021 Die Schweizerische Post"
+    FooterSubText: ="Impressum"
+    Height: =40
+    Width: =App.Width
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    grpFooterComp As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =599
+        ZIndex: =4
+
+        recFooterBkg As rectangle:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =40
+            Width: =Parent.Width
+            Y: =
+            ZIndex: =1
+
+        ctnFooterColumn As groupContainer.horizontalAutoLayoutContainer:
+            Height: =40
+            LayoutMode: =LayoutMode.Auto
+            Width: =Parent.Width
+            X: =60
+            Y: =
+            ZIndex: =2
+
+            lblFooterMain As label:
+                BorderColor: =RGBA(204, 204, 204, 1)
+                DisabledBorderColor: =RGBA(56, 56, 56, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FillPortions: =1
+                FontWeight: =FontWeight.Semibold
+                Height: =Parent.Height
+                LayoutMinHeight: =70
+                LayoutMinWidth: =Len(Self.Text)* Self.Size * 0.8
+                PaddingLeft: =0
+                PaddingRight: =0
+                Size: =13
+                Text: =FooterComp.FooterMainText
+                Width: =272
+                X: =385
+                Y: =410
+                ZIndex: =1
+
+            lblFooterSub As label:
+                BorderColor: =RGBA(204, 204, 204, 1)
+                DisabledBorderColor: =RGBA(56, 56, 56, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FillPortions: =2
+                FontWeight: =FontWeight.Lighter
+                Height: =Parent.Height
+                LayoutMinHeight: =70
+                LayoutMinWidth: =300
+                PaddingLeft: =0
+                PaddingRight: =0
+                Size: =13
+                Text: =FooterComp.FooterSubText
+                Width: =278
+                X: =416
+                Y: =606
+                ZIndex: =2
+
+        recFooterSeparator As rectangle:
+            BorderColor: =RGBA(204, 204, 204, 1)
+            BorderThickness: =1
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =1
+            Width: =Parent.Width
+            X: =
+            Y: =
+            ZIndex: =3
+

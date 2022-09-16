@@ -1,0 +1,51 @@
+"'Template screen_1' As screen":
+    LoadingSpinnerColor: =RGBA(100, 118, 132, 1)
+
+    NavComp_2 As NavComp:
+        IconImage: =
+        NavigationItems: |-
+            =Table(
+                {ItemKey:"sample",ItemDisplayName:"Sample",TargetScreen:'Sample screen'},
+                {ItemKey:"template",ItemDisplayName:"Template", TargetScreen: 'Template screen_1'},
+                {ItemKey:"powerbee",ItemDisplayName:"PowerBee", url: "https://postchag.sharepoint.com/sites/powerplatform"},
+                {ItemKey:"testkey",ItemDisplayName:"Test Key"}
+            )
+
+    FooterComp_2 As FooterComp:
+        Width: =1366
+        Y: =728
+        ZIndex: =2
+
+    Container1_1 As groupContainer.verticalAutoLayoutContainer:
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =FooterComp_2.Y - Self.Y
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        LayoutOverflowY: =LayoutOverflow.Scroll
+        PaddingLeft: =60
+        PaddingRight: =60
+        Width: =1366
+        Y: =NavComp_2.Height
+        ZIndex: =3
+
+        Container2_1 As groupContainer.manualLayoutContainer:
+            Fill: =RGBA(255, 255, 255, 1)
+            LayoutMinHeight: =700
+            LayoutMinWidth: =250
+            ZIndex: =1
+
+            lblTempalteScrHeading As label:
+                BorderColor: =RGBA(0, 18, 107, 1)
+                DisabledBorderColor: =RGBA(56, 56, 56, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =89
+                PaddingLeft: =0
+                Size: =32
+                Text: |-
+                    ="Template screen
+                    "
+                Width: =430
+                Y: =40
+                ZIndex: =1
+

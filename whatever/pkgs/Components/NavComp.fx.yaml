@@ -1,0 +1,146 @@
+NavComp As CanvasComponent:
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =71
+    iconClick: =true
+    IconImage: =postlonglogo
+    NavigationItems: |-
+        =Table(
+            {ItemKey:"current",ItemDisplayName:"Active Screen",TargetScreen:App.ActiveScreen},
+            {ItemKey:"powerbee",ItemDisplayName:"PowerBee", url: "https://postchag.sharepoint.com/sites/powerplatform"},
+            {ItemKey:"testkey",ItemDisplayName:"Test Key"}
+        )
+    OnReset: =Set(selectedKey,"")
+    SelectedKey: =selectedKey
+    useIconFit: =false
+    userClick: =true
+    UserImageLocation: =imgCurrentUser.X
+    Width: =1366
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    recHeaderSeparator As rectangle:
+        BorderColor: =RGBA(204, 204, 204, 1)
+        BorderThickness: =1
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =1
+        Width: =Parent.Width
+        Y: =70
+        ZIndex: =1
+
+    recHeaderBkg As rectangle:
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =recHeaderSeparator.Y
+        Width: =Parent.Width
+        ZIndex: =2
+
+    ctnNavigationPositioning As groupContainer.horizontalAutoLayoutContainer:
+        Height: =70
+        LayoutJustifyContent: =LayoutJustifyContent.Center
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width
+        ZIndex: =6
+
+        ctnNavigationHeaderLayout As groupContainer.horizontalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =225
+            LayoutGap: =50
+            LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+            LayoutMinHeight: =71
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            Width: =Min(Parent.Width,1366)
+            ZIndex: =1
+
+            ctnNavigationLeft As groupContainer.horizontalAutoLayoutContainer:
+                FillPortions: =3
+                Height: =225
+                LayoutGap: =50
+                LayoutMinHeight: =70
+                LayoutMinWidth: =700
+                LayoutMode: =LayoutMode.Auto
+                PaddingLeft: =If(IsBlank(NavComp.IconImage),10,0)
+                ZIndex: =3
+
+                imgHeaderIcon As image:
+                    Height: =70
+                    Image: =NavComp.IconImage
+                    ImagePosition: =If(NavComp.useIconFit,ImagePosition.Fit,ImagePosition.Fill)
+                    LayoutMinHeight: =320
+                    LayoutMinWidth: =320
+                    OnSelect: =NavHeaderComp.iconClick()
+                    Visible: =!IsBlank(Self.Image)
+                    Width: =200
+                    ZIndex: =1
+
+                glrNavigation As gallery.galleryHorizontal:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    Default: =LookUp(NavComp.NavigationItems,TargetScreen=App.ActiveScreen)
+                    Height: =70
+                    Items: =NavComp.NavigationItems
+                    LayoutMinHeight: =287
+                    LayoutMinWidth: =600
+                    ShowNavigation: =true
+                    ShowScrollbar: =false
+                    TabIndex: =0
+                    TemplatePadding: =0
+                    TemplateSize: =150
+                    Width: =imgCurrentUser.X - (glrNavigation.X + 150)
+                    X: =If(!IsBlank(imgHeaderIcon.Image),imgHeaderIcon.Width + 50,60)
+                    ZIndex: =2
+
+                    btnNavItem As Schaltfläche:
+                        Alignment: =Align.Center
+                        ButtonType: ='''Microsoft.CoreControls.Button.ButtonType'''.Standard
+                        DisplayMode: =DisplayMode.Edit
+                        FillColor: =RGBA(255,255,255,1)
+                        FontSize: =15
+                        FontWeight: =If(ThisItem.IsSelected,FontWeight.Semibold,FontWeight.Normal )
+                        Height: =Parent.Height
+                        OnSelect: |-
+                            =If(
+                                !IsBlank(ThisItem.TargetScreen),Navigate(ThisItem.TargetScreen),
+                                !IsBlank(ThisItem.url),Launch(ThisItem.url),
+                                Set(selectedKey, ThisItem.ItemKey)
+                            )
+                        Text: =ThisItem.ItemDisplayName
+                        TextColor: =If(ThisItem.IsSelected, Black ,RGBA(102, 102, 102, 1))
+                        Width: =150
+                        X: =0
+                        Y: =0
+                        ZIndex: =2
+
+                    recNavIndicator As rectangle:
+                        Fill: =RGBA(255, 191, 0, 1)
+                        Height: =4
+                        Visible: =ThisItem.IsSelected
+                        Width: =Parent.TemplateWidth
+                        Y: =Parent.Height-4
+                        ZIndex: =3
+
+            ctnNavigationRight As groupContainer.horizontalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                Height: =70
+                LayoutJustifyContent: =LayoutJustifyContent.End
+                LayoutMinHeight: =112
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                PaddingRight: =12
+                ZIndex: =4
+
+                imgCurrentUser As image:
+                    AlignInContainer: =AlignInContainer.Center
+                    Height: =45
+                    Image: =User().Image
+                    LayoutMinHeight: =320
+                    LayoutMinWidth: =320
+                    OnSelect: =NavHeaderComp.userClick()
+                    RadiusBottomLeft: =50
+                    RadiusBottomRight: =50
+                    RadiusTopLeft: =50
+                    RadiusTopRight: =50
+                    Width: =45
+                    X: =Parent.Width - (Self.Width + 60)
+                    Y: =12
+                    ZIndex: =1
+

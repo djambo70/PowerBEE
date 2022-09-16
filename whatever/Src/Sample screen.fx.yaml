@@ -1,0 +1,286 @@
+"'Sample screen' As screen":
+    LoadingSpinner: =LoadingSpinner.Controls
+
+    NavComp_1 As NavComp:
+        NavigationItems: |-
+            =Table(
+                {ItemKey:"sample",ItemDisplayName:"Sample",TargetScreen:'Sample screen'},
+                {ItemKey:"template",ItemDisplayName:"Template", TargetScreen: 'Template screen_1'},
+                {ItemKey:"powerbee",ItemDisplayName:"PowerBee", url: "https://postchag.sharepoint.com/sites/powerplatform"},
+                {ItemKey:"testkey",ItemDisplayName:"Test Key"}
+            )
+
+    FooterComp_1 As FooterComp:
+        Width: =1366
+        Y: =728
+        ZIndex: =2
+
+    Container1 As groupContainer.verticalAutoLayoutContainer:
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =FooterComp_1.Y - Self.Y
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        LayoutOverflowY: =LayoutOverflow.Scroll
+        PaddingLeft: =60
+        PaddingRight: =60
+        Width: =1366
+        Y: =NavComp_1.Height
+        ZIndex: =3
+
+        Container2 As groupContainer.manualLayoutContainer:
+            Fill: =RGBA(255, 255, 255, 1)
+            LayoutMinHeight: =1000
+            LayoutMinWidth: =250
+            PaddingLeft: =60
+            PaddingRight: =60
+            ZIndex: =1
+
+            "'Heading H1_7' As label":
+                BorderColor: =RGBA(0, 18, 107, 1)
+                DisabledBorderColor: =RGBA(56, 56, 56, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =89
+                PaddingLeft: =0
+                Size: =32
+                Text: |-
+                    ="Heading H1
+                    "
+                Width: =430
+                Y: =40
+                ZIndex: =1
+
+            txt_header As label:
+                BorderColor: =RGBA(0, 18, 107, 1)
+                DisabledBorderColor: =RGBA(56, 56, 56, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Lighter
+                Height: =84
+                LineHeight: =1.4
+                PaddingLeft: =0
+                Size: =18
+                Text: ="Einfach, übersichtlich, informativ – das ist PostWeb, das Intranet der Post. PostWeb ist das zentrale digitale Arbeitsinstrument mit Zugang zu relevanten Informationen, verschiedenen Tools und Kontakten."
+                Width: =1058
+                Y: =109
+                ZIndex: =2
+
+            txt_bild_links As group:
+                Height: =5
+                Width: =5
+                X: =-20
+                Y: =-46
+                ZIndex: =8
+
+                txt_bildLinks As label:
+                    BorderColor: =RGBA(0, 18, 107, 1)
+                    DisabledBorderColor: =RGBA(56, 56, 56, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FontWeight: =FontWeight.Lighter
+                    Height: =115
+                    LineHeight: =1.4
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =16
+                    Text: |-
+                        ="Die Ergebnisse der GIM-Studie (Marktforschungsunternehmen GIM Suisse AG) bestätigen grossmehrheitlich die gemachten Beobachtungen: Menschen, die schon einmal..."
+                    Width: =430
+                    X: =342
+                    Y: =253
+                    ZIndex: =3
+
+                Bild_Links As image:
+                    BorderColor: =RGBA(0, 18, 107, 1)
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    Height: =192
+                    ImagePosition: =ImagePosition.Fill
+                    RadiusBottomLeft: =2
+                    RadiusBottomRight: =2
+                    RadiusTopLeft: =2
+                    RadiusTopRight: =2
+                    Width: =302
+                    Y: =211
+                    ZIndex: =4
+
+                header_bildLinks As label:
+                    BorderColor: =RGBA(0, 18, 107, 1)
+                    DisabledBorderColor: =RGBA(56, 56, 56, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FontWeight: =FontWeight.Semibold
+                    Height: =42
+                    LineHeight: =1
+                    PaddingBottom: =1
+                    PaddingLeft: =0
+                    PaddingTop: =0
+                    Size: =20
+                    Text: ="Überschrift Bild links"
+                    Width: =378
+                    X: =341
+                    Y: =204
+                    ZIndex: =5
+
+                lbl_mehr As label:
+                    BorderColor: =RGBA(0, 18, 107, 1)
+                    DisabledBorderColor: =RGBA(56, 56, 56, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Height: =38
+                    PaddingLeft: =0
+                    Text: ="mehr erfahren"
+                    Width: =288
+                    X: =383
+                    Y: =368
+                    ZIndex: =6
+
+                Icon_mehrErfahren As icon.ArrowRight:
+                    BorderColor: =RGBA(0, 18, 107, 1)
+                    Color: =RGBA(0, 0, 0, 0.8)
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledColor: =RGBA(244, 244, 244, 1)
+                    Height: =28
+                    Icon: =Icon.ArrowRight
+                    Width: =28
+                    X: =342
+                    Y: =378
+                    ZIndex: =7
+
+            TextInLabel_2 As label:
+                BorderColor: =RGBA(0, 18, 107, 1)
+                DisabledBorderColor: =RGBA(56, 56, 56, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Lighter
+                Height: =144
+                LineHeight: =1.4
+                PaddingLeft: =0
+                PaddingTop: =0
+                Text: ="Geben Sie Ihrem Team die Mittel in die Hand, Apps mithilfe von Vorlagen und einfachen Drag & Drop-Funktionen zu erstellen und über die schnelle Bereitstellung sofort zu veröffentlichen. Anschliessend können Verbesserungen bei Bedarf kontinuierlich implementiert werden."
+                Width: =509
+                Y: =661
+                ZIndex: =14
+
+            txt_bild_links_1 As group:
+                Height: =5
+                Width: =5
+                X: =-20
+                Y: =-46
+                ZIndex: =14
+
+                txt_bildLinks_1 As label:
+                    BorderColor: =RGBA(0, 18, 107, 1)
+                    DisabledBorderColor: =RGBA(56, 56, 56, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FontWeight: =FontWeight.Lighter
+                    Height: =115
+                    LineHeight: =1.4
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =16
+                    Text: |-
+                        ="Die Ergebnisse der GIM-Studie (Marktforschungsunternehmen GIM Suisse AG) bestätigen grossmehrheitlich die gemachten Beobachtungen: Menschen, die schon einmal..."
+                    Width: =430
+                    X: =342
+                    Y: =481
+                    ZIndex: =9
+
+                Bild_Links_1 As image:
+                    BorderColor: =RGBA(0, 18, 107, 1)
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    Height: =192
+                    ImagePosition: =ImagePosition.Fill
+                    RadiusBottomLeft: =2
+                    RadiusBottomRight: =2
+                    RadiusTopLeft: =2
+                    RadiusTopRight: =2
+                    Width: =302
+                    Y: =439
+                    ZIndex: =10
+
+                header_bildLinks_1 As label:
+                    BorderColor: =RGBA(0, 18, 107, 1)
+                    DisabledBorderColor: =RGBA(56, 56, 56, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FontWeight: =FontWeight.Semibold
+                    Height: =42
+                    LineHeight: =1
+                    PaddingBottom: =1
+                    PaddingLeft: =0
+                    PaddingTop: =0
+                    Size: =20
+                    Text: ="Überschrift Bild links"
+                    Width: =378
+                    X: =341
+                    Y: =432
+                    ZIndex: =11
+
+                lbl_mehr_1 As label:
+                    BorderColor: =RGBA(0, 18, 107, 1)
+                    DisabledBorderColor: =RGBA(56, 56, 56, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Height: =38
+                    PaddingLeft: =0
+                    Text: ="mehr erfahren"
+                    Width: =288
+                    X: =383
+                    Y: =596
+                    ZIndex: =12
+
+                Icon_mehrErfahren_1 As icon.ArrowRight:
+                    BorderColor: =RGBA(0, 18, 107, 1)
+                    Color: =RGBA(0, 0, 0, 0.8)
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledColor: =RGBA(244, 244, 244, 1)
+                    Height: =28
+                    Icon: =Icon.ArrowRight
+                    Width: =28
+                    X: =342
+                    Y: =606
+                    ZIndex: =13
+
+            TextInLabel_3 As label:
+                BorderColor: =RGBA(0, 18, 107, 1)
+                DisabledBorderColor: =RGBA(56, 56, 56, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Lighter
+                Height: =131
+                LineHeight: =1.4
+                PaddingLeft: =0
+                PaddingTop: =0
+                Text: ="Geben Sie Ihrem Team die Mittel in die Hand, Apps mithilfe von Vorlagen und einfachen Drag & Drop-Funktionen zu erstellen und über die schnelle Bereitstellung sofort zu veröffentlichen. Anschliessend können Verbesserungen bei Bedarf kontinuierlich implementiert werden."
+                Width: =509
+                Y: =827
+                ZIndex: =15
+
+            TextInLabel_4 As label:
+                BorderColor: =RGBA(0, 18, 107, 1)
+                DisabledBorderColor: =RGBA(56, 56, 56, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Lighter
+                Height: =131
+                LineHeight: =1.4
+                PaddingLeft: =0
+                PaddingTop: =0
+                Text: ="Geben Sie Ihrem Team die Mittel in die Hand, Apps mithilfe von Vorlagen und einfachen Drag & Drop-Funktionen zu erstellen und über die schnelle Bereitstellung sofort zu veröffentlichen. Anschliessend können Verbesserungen bei Bedarf kontinuierlich implementiert werden."
+                Width: =509
+                X: =630
+                Y: =827
+                ZIndex: =16
+
+            TextInLabel_5 As label:
+                BorderColor: =RGBA(0, 18, 107, 1)
+                DisabledBorderColor: =RGBA(56, 56, 56, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Lighter
+                Height: =144
+                LineHeight: =1.4
+                PaddingLeft: =0
+                PaddingTop: =0
+                Text: ="Geben Sie Ihrem Team die Mittel in die Hand, Apps mithilfe von Vorlagen und einfachen Drag & Drop-Funktionen zu erstellen und über die schnelle Bereitstellung sofort zu veröffentlichen. Anschliessend können Verbesserungen bei Bedarf kontinuierlich implementiert werden."
+                Width: =509
+                X: =632
+                Y: =661
+                ZIndex: =17
+
