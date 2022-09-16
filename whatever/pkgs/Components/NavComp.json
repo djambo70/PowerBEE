@@ -58,7 +58,7 @@
         "Name": "recHeaderBkg",
         "Parent": "NavComp",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 27,
+        "PublishOrderIndex": 9,
         "Rules": [
           {
             "Category": "Design",
@@ -309,7 +309,7 @@
                     "Name": "imgHeaderIcon",
                     "Parent": "ctnNavigationLeft",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 31,
+                    "PublishOrderIndex": 15,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -536,7 +536,7 @@
                         "Name": "galleryTemplate3",
                         "Parent": "glrNavigation",
                         "PersistMetaDataIDKey": false,
-                        "PublishOrderIndex": 33,
+                        "PublishOrderIndex": 17,
                         "Rules": [
                           {
                             "Category": "Design",
@@ -663,7 +663,7 @@
                         "Name": "btnNavItem",
                         "Parent": "glrNavigation",
                         "PersistMetaDataIDKey": false,
-                        "PublishOrderIndex": 34,
+                        "PublishOrderIndex": 18,
                         "Rules": [
                           {
                             "Category": "Data",
@@ -844,7 +844,7 @@
                         "Name": "recNavIndicator",
                         "Parent": "glrNavigation",
                         "PersistMetaDataIDKey": false,
-                        "PublishOrderIndex": 35,
+                        "PublishOrderIndex": 19,
                         "Rules": [
                           {
                             "Category": "Design",
@@ -1128,7 +1128,7 @@
                     "Name": "glrNavigation",
                     "Parent": "ctnNavigationLeft",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 32,
+                    "PublishOrderIndex": 16,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -1428,7 +1428,7 @@
                 "Name": "ctnNavigationLeft",
                 "Parent": "ctnNavigationHeaderLayout",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 30,
+                "PublishOrderIndex": 13,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -1710,7 +1710,7 @@
                     "Name": "imgCurrentUser",
                     "Parent": "ctnNavigationRight",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 37,
+                    "PublishOrderIndex": 20,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -2014,7 +2014,7 @@
                 "Name": "ctnNavigationRight",
                 "Parent": "ctnNavigationHeaderLayout",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 36,
+                "PublishOrderIndex": 14,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -2265,7 +2265,7 @@
             "Name": "ctnNavigationHeaderLayout",
             "Parent": "ctnNavigationPositioning",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 29,
+            "PublishOrderIndex": 12,
             "Rules": [
               {
                 "Category": "Design",
@@ -2454,7 +2454,7 @@
         "Name": "ctnNavigationPositioning",
         "Parent": "NavComp",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 28,
+        "PublishOrderIndex": 10,
         "Rules": [
           {
             "Category": "Design",
@@ -2656,7 +2656,7 @@
         "Name": "recHeaderSeparator",
         "Parent": "NavComp",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 38,
+        "PublishOrderIndex": 11,
         "Rules": [
           {
             "Category": "Design",
@@ -2838,7 +2838,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "637988957653640257",
+    "LastModifiedTimestamp": "637988992782877941",
     "Name": "NavComp",
     "Rules": [
       {
@@ -3009,7 +3009,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "637988957653640257",
+  "LastModifiedTimestamp": "637988992782877941",
   "Name": "e24da101196a4effbf56bfbe80950d3d",
   "OverridableProperties": {},
   "SourceLibraryId": "afd66c62-5e8e-4992-8987-a34dfb1c8498",
