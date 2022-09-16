@@ -109,6 +109,7 @@
   },
   "ScreenOrder": [
     "Sample screen",
-    "Template screen_1"
+    "Template screen_1",
+    "Screen1"
   ]
 }
