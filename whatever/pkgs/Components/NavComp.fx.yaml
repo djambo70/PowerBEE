@@ -89,7 +89,7 @@ NavComp As CanvasComponent:
                     X: =If(!IsBlank(imgHeaderIcon.Image),imgHeaderIcon.Width + 50,60)
                     ZIndex: =2
 
-                    btnNavItem As Schaltfläche:
+                    btnNavItem As Button:
                         Alignment: =Align.Center
                         ButtonType: ='''Microsoft.CoreControls.Button.ButtonType'''.Standard
                         DisplayMode: =DisplayMode.Edit

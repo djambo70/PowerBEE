@@ -105,10 +105,11 @@
     "PublishDataLocally": false,
     "PublishResourcesLocally": false,
     "PublishTarget": "player",
-    "UserLocale": "de-DE"
+    "UserLocale": "en-US"
   },
   "ScreenOrder": [
     "Sample screen",
-    "Template screen_1"
+    "Template screen_1",
+    "Screen1"
   ]
 }
